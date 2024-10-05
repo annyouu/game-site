@@ -1,0 +1,393 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Zen+Antique&display=swap');
+
+ /* :root {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+} */
+
+* {
+  transition: all 0.4s ease;
+} 
+
+body {
+  font-family: "Zen Antique", serif;
+  color: white !important;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  padding: 2.0rem 4.0rem;
+  text-shadow: black 1px 3px 6px;
+  z-index: 1000;
+  position: fixed;
+  cursor: pointer;
+}
+
+.first {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bi {
+ font-size: 40px;
+ color: white;
+}
+
+h2, span, a, p {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* menubar-section */
+header .menu-bar {
+ position: absolute; /* position fixの外に出る */
+ top: 30vh;
+ right: -200px;
+ background: #000;
+ width: 170px;
+ height: 400px;
+ display: flex; 
+ align-items: center;
+ justify-content: center;
+ border-radius: 2rem;
+ font-size: 20px;
+ box-shadow: 4px 4px 8px rgba(0, 2, 0, 0.3);
+ opacity: 0;
+}
+
+header .menu-bar .active {
+  right: -20px;
+  opacity: 1;
+}
+
+header .menu-bar li {
+  margin-bottom: 3rem;
+}
+
+header .menu-bar li a {
+  color: white;
+  text-decoration: none;
+}
+
+header .menu-bar li a:hover {
+  color: aquamarine;
+}
+
+/* hero section */
+.hero {
+  background-image: url("images/another-world.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  position: relative; 
+}
+
+.hero::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.hero .title {
+  transform: translateY(230px);
+}
+
+.hero h1 {
+  text-shadow: black 1px 3px 6px;
+  font-size: 7.5rem;
+  
+}
+
+.hero h3 {
+  position: relative;
+  width: 450px;
+  text-align: right;
+  text-shadow: black 1px 3px 6px;
+  font-size: 3rem; 
+  font-weight: 540;
+  z-index: 1;
+}
+
+/* sale section */
+.sale h2 {
+  font-size: 5rem;
+}
+
+.sale h3 {
+  font-size: 3rem;
+}
+
+.sale img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-effect {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.game-card {
+  background-color: rgb(255, 255, 255);
+}
+
+.card-effect h5 {
+  font-size: 2rem;
+}
+
+.card-effect p {
+  font-size: 1.7rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.repair {
+  all: unset;
+  color: white;
+  background-color: #0D6EFD;
+  border: solid 1px #0D6EFD;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* company section */
+.company {
+  background-image: url(images/house.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.company-info {
+  text-align: center;
+}
+
+.company::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.company h2 {
+  font-size: 4.0rem;
+}
+
+.company p {
+  font-size: 2.5rem;
+  line-height: 4.0rem;
+}
+
+.company .detail {
+  position: absolute;
+  top: 30%;
+  right: 10%; 
+}
+
+.company-text-last {
+  position: absolute;
+  top: 70%;
+  left: 7%;
+}
+
+.company .more {
+  position: absolute;
+  top: 82%;
+  left: 28%;
+}
+
+.company-info .more a .ho {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.company-info .more a .ho:hover {
+  color: aquamarine;
+  transform: translateX(1rem);
+}
+
+/* .ab {
+  text-align: center;
+  margin: 0 auto;
+} mx-autoとtext-centerが中央になければ、文字を中央に配置できない */ 
+ 
+/* hardware section */
+
+.hardware h2 {
+ font-size: 4rem;
+}
+
+.hardware h3 {
+  font-size: 30px;
+}
+.hardware-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hardware-card .overlay {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.hardware-card .overlay:hover {
+  transform: scale(1.1);
+  background-color: rgb(13, 71, 92);
+  opacity: 0.3;
+}
+
+.hardware-card h3 {
+  position:absolute;
+  color: white;
+  font-size: 4rem;
+  opacity: 0;
+}
+
+.hardware-card:hover img {
+  transform: scale(1.1);
+}
+
+.hardware-card:hover h3 {
+  opacity: 1;
+}
+
+
+.hardware-card img {
+  width: 100%;
+  height: 100%;
+}
+
+/* contact section */
+.contact {
+  background-image: url("images/butterfly.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative; 
+}
+
+.contact input {
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.contact textarea {
+  width: 100%;
+}
+
+.contact .vision-sight-logo h3 {
+  position: absolute;
+  bottom: 6%;
+  right: 8%;
+  font-size: 4rem;
+}
+
+/* footer section */
+footer {
+  padding: 40px;
+  font-size: 2rem;
+}
+
+footer h2 {
+  font-size: 3rem;
+  height: 50%;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  color: aquamarine;
+}
+
+/* media query */
+@media (max-width: 1000px) {
+  .hero h1 {
+     font-size: 5rem;
+  }
+
+  .hero h3 {
+    width: 400px;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .title {
+     transform: translateY(-50px);
+     text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 6rem;
+  }
+  .hero h3 {
+    width: 100%;
+    text-align: center;
+  }
+  @media (max-width: 576px) {
+    html {
+      font-size: 45%;
+    }
+    .hero h3 {
+      font-size: 2rem;
+    }
+
+    /* company section */
+   .company-info {
+    text-align: center !important;
+    padding: 2rem !important;
+   }
+
+   .company-text-last {
+    position: static;
+    margin-top: 30rem;
+   }
+
+   .company-info .more {
+    text-align: center !important;
+    padding: 10px 45px !important;
+   }
+
+   /* contact section */
+   .contact h2 {
+    font-size: 4.6;
+    text-align: center;
+   }
+
+   footer {
+    padding-top: 15px;
+   }
+}
+}
